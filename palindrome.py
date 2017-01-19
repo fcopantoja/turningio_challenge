@@ -38,4 +38,4 @@ if __name__ == '__main__':
     for i in range(1, 1001):
         palindrome, base = lowest_base_palindrome(i)
         if palindrome:
-            print('{} in base {} is palindrome ({})'.format(i, base, palindrome))
+            print '{} in base {} is palindrome ({})'.format(i, base, palindrome)
