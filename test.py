@@ -17,19 +17,15 @@ class PalindromeTestCase(unittest.TestCase):
 
     def test_base10_to_n(self):
         n = 20
-        hexadecimal = '{0:x}'.format(n)
         octal = '{0:o}'.format(n)
         binary = '{0:b}'.format(n)
-        self.assertEquals(base10_to_n(n, 16), hexadecimal)
         self.assertEquals(base10_to_n(n, 8), octal)
         self.assertEquals(base10_to_n(n, 2), binary)
         self.assertEquals(base10_to_n(n, 10), str(n))
 
         n = 6932
-        hexadecimal = '{0:x}'.format(n)
         octal = '{0:o}'.format(n)
         binary = '{0:b}'.format(n)
-        self.assertEquals(base10_to_n(n, 16), hexadecimal)
         self.assertEquals(base10_to_n(n, 8), octal)
         self.assertEquals(base10_to_n(n, 2), binary)
         self.assertEquals(base10_to_n(n, 10), str(n))
@@ -42,6 +38,14 @@ class PalindromeTestCase(unittest.TestCase):
         palindrome, base = lowest_base_palindrome(93)
         self.assertEquals(palindrome, '1011101')
         self.assertEquals(base, 2)
+
+    def test_first_1000_palindromes(self):
+        for i in range(1, 1001):
+            palindrome, base = lowest_base_palindrome(i)
+            self.assertIsNotNone(palindrome)
+            self.assertIsNotNone(base)
+            if palindrome:
+                print('{} in base {} is palindrome ({})'.format(i, base, palindrome))
 
 
 def main():
