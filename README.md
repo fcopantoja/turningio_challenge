@@ -1,3 +1,9 @@
+Program that print out the lowest base palindrome for all numbers up to 1000
+
+Example:  
+An input of 28 should return the base 3 since the ternary representation of 28 is 1001.  
+Although 93 is a palindrome in both base 2 and base 5, the output should be 2 since 2<5.
+
 
 Instructions  
 =======
