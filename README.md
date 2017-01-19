@@ -2,8 +2,8 @@
 Instructions  
 =======
 
-Run with python3 ```python palindrome.py```  
-Run tests with ```python test.py```  
+Run with python2 ```python palindrome.py```  
+Run tests with ```python -m unittest discover```  
 
 Console output
 =======
@@ -683,3 +683,15 @@ Console output
 999 in base 10 is palindrome (999)
 1000 in base 9 is palindrome (1331)
 ```
+
+Console output fot Tests
+=======
+```
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+```
+
